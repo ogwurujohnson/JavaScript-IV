@@ -228,3 +228,9 @@ const ade = new ProjectManager({
     gradClassName: 'webeu1',
     favInstructor: 'Gabe',
 });
+
+
+
+// Person method
+johnson.speak();
+melvine.speak();
