@@ -234,3 +234,26 @@ const ade = new ProjectManager({
 // Person method
 johnson.speak();
 melvine.speak();
+
+// Instructor methods
+nabeelah.demo('JavaScript');
+nabeelah.grade({name: 'johnson'}, 'JavaScript');
+
+kelechi.demo('JavaScript');
+kelechi.grade({name: 'melvine'}, 'JavaScript');
+
+// Student methods
+noble.listSubjects();
+noble.prAssignment('Javascript');
+noble.sprintChallenge('Javascript');
+
+vincent.listSubjects();
+vincent.prAssignment('Javascript');
+vincent.sprintChallenge('Javascript');
+
+// Project manager methods
+ogbonna.standUp('webeu2 ogbonna');
+ogbonna.debugCode({name: 'yusuf'}, 'css');
+
+ade.standUp('webeu2 ade');
+ade.debugCode({name: 'james'}, 'ruby');
