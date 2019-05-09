@@ -76,13 +76,13 @@ class Instructor extends Person {
         return console.log(`${student.name} receives a perfect score on ${subject}`);
     }
 
-    scoreManipulation(type, scoreAmount) {
+    scoreManipulation(type, scoreAmount, student) {
         if(type === 'add') {
-            noble.grade += scoreAmount;
+            student.grade += scoreAmount;
         } else {
-            noble.grade -= scoreAmount;
+            student.grade -= scoreAmount;
         }
-        return console.log(`${noble.name} grade is ${noble.grade}`);
+        return console.log(`${student.name} grade is ${student.grade}`);
     }
     
 }
@@ -105,11 +105,11 @@ class Student extends Person {
      */
     constructor(studentAttributes) {
         super(studentAttributes);
-        const {previousBackground, className, favSubjects} = studentAttributes;
+        const {previousBackground, className, favSubjects, grade} = studentAttributes;
         this.previousBackground = previousBackground;
         this.className = className;
         this.favSubjects = favSubjects;
-        this.grade = 80;
+        this.grade = grade;
     }
 
     /**
@@ -217,6 +217,7 @@ const noble = new Student({
     previousBackground: 'Boxer',
     className: 'Webeu2 sprint2',
     favSubjects: ['CSS', 'HTML', 'JavaScript'],
+    grade: 80,
 });
 
 const vincent = new Student({
@@ -227,6 +228,7 @@ const vincent = new Student({
     previousBackground: 'Newspaper vendor',
     className: 'Webeu2 sprint3',
     favSubjects: ['JavaScript', 'Ruby', 'Python'],
+    grade: 70
 });
 
 // Project Manager Instances
@@ -269,8 +271,8 @@ nabeelah.grade({name: 'johnson'}, 'JavaScript');
 const score = Math.floor(Math.random() * Math.floor(30));
 kelechi.demo('JavaScript');
 kelechi.grade({name: 'melvine'}, 'JavaScript');
-kelechi.scoreManipulation('subtract', score); //for subtracting grade
-kelechi.scoreManipulation('add', score); //for adding to grade
+kelechi.scoreManipulation('subtract', score, noble); //for subtracting grade
+kelechi.scoreManipulation('add', score, noble); //for adding to grade
 
 // Student methods
 console.log('---------student methods---------------');
