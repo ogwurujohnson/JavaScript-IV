@@ -9,3 +9,4 @@ Prototype Refactor
 */
 
     this.name = attributes.name;
+    this.healthPoints = characterAttributes.healthPoints;
