@@ -30,6 +30,9 @@ class Person {
 }
 
 
+
+
+
 /**
  *
  *
@@ -72,8 +75,19 @@ class Instructor extends Person {
     grade(student, subject) {
         return console.log(`${student.name} receives a perfect score on ${subject}`);
     }
+
+    scoreManipulation(type, scoreAmount) {
+        if(type === 'add') {
+            noble.grade += scoreAmount;
+        } else {
+            noble.grade -= scoreAmount;
+        }
+        return console.log(`${noble.name} grade is ${noble.grade}`);
+    }
     
 }
+
+
 
 
 /**
@@ -132,6 +146,12 @@ class Student extends Person {
 }
 
 
+/**
+ *
+ *
+ * @class ProjectManager
+ * @extends {Instructor}
+ */
 class ProjectManager extends Instructor {
     constructor(pmAttributes) {
         super(pmAttributes);
@@ -246,8 +266,11 @@ console.log('---------instructor methods---------------');
 nabeelah.demo('JavaScript');
 nabeelah.grade({name: 'johnson'}, 'JavaScript');
 
+const score = Math.floor(Math.random() * Math.floor(30));
 kelechi.demo('JavaScript');
 kelechi.grade({name: 'melvine'}, 'JavaScript');
+kelechi.scoreManipulation('subtract', score); //for subtracting grade
+kelechi.scoreManipulation('add', score); //for adding to grade
 
 // Student methods
 console.log('---------student methods---------------');
