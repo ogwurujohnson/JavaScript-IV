@@ -91,9 +91,10 @@ class Student extends Person {
      */
     constructor(studentAttributes) {
         super(studentAttributes);
-        this.previousBackground = studentAttributes.previousBackground;
-        this.className = studentAttributes.className;
-        this.favSubjects = studentAttributes.favSubjects;
+        const {previousBackground, className, favSubjects} = studentAttributes;
+        this.previousBackground = previousBackground;
+        this.className = className;
+        this.favSubjects = favSubjects;
     }
 
     /**
@@ -133,8 +134,9 @@ class Student extends Person {
 class ProjectManager extends Instructor {
     constructor(pmAttributes) {
         super(pmAttributes);
-        this.gradClassName = pmAttributes.gradClassName;
-        this.favInstructor = pmAttributes.favInstructor;
+        const {gradClassName, favInstructor} = pmAttributes;
+        this.gradClassName = gradClassName;
+        this.favInstructor = favInstructor;
     }
 
     standUp(channel) {
