@@ -145,21 +145,40 @@ class ProjectManager extends Instructor {
 }
 
 
-// Person class instances
+// Person class Instances
 
-const Johnson = new Person({
+const johnson = new Person({
     name: 'johnson',
     age: 34,
     location: 'lagos, nigeria',
     gender: 'male',
 });
 
-const Melvine = new Person({
+const melvine = new Person({
     name: 'melvine',
     age: 37,
     location: 'cameroon',
     gender: 'male',
 });
 
+// Instructor class Instances
 
+const nabeelah = new Instructor({
+    name: 'nabeelah',
+    age: 27,
+    location: 'lagos, nigeria',
+    gender: 'female',
+    specialty: 'Web Technology',
+    favLanguage: 'JavaScript',
+    catchPhrase: 'I am the best..yehh',
+});
 
+const kelechi = new Instructor({
+    name: 'kelechi',
+    age: 27,
+    location: 'lagos, nigeria',
+    gender: 'female',
+    specialty: 'Mobile Development',
+    favLanguage: 'Java',
+    catchPhrase: 'I like trouble',
+});
