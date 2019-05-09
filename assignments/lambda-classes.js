@@ -104,7 +104,7 @@ class Student extends Person {
      * @memberof Student
      */
     listSubjects() {
-        return console.log(this.favSubjects.map(subject => console.log (subject)));
+        this.favSubjects.map(subject => console.log (subject));
     }
 
     /**
@@ -236,10 +236,12 @@ const ade = new ProjectManager({
 
 
 // Person method
+console.log('---------person methods---------------');
 johnson.speak();
 melvine.speak();
 
 // Instructor methods
+console.log('---------instructor methods---------------');
 nabeelah.demo('JavaScript');
 nabeelah.grade({name: 'johnson'}, 'JavaScript');
 
@@ -247,6 +249,7 @@ kelechi.demo('JavaScript');
 kelechi.grade({name: 'melvine'}, 'JavaScript');
 
 // Student methods
+console.log('---------student methods---------------');
 noble.listSubjects();
 noble.prAssignment('Javascript');
 noble.sprintChallenge('Javascript');
@@ -256,6 +259,7 @@ vincent.prAssignment('Javascript');
 vincent.sprintChallenge('Javascript');
 
 // Project manager methods
+console.log('---------project manager methods---------------');
 ogbonna.standUp('webeu2 ogbonna');
 ogbonna.debugCode({name: 'yusuf'}, 'css');
 
