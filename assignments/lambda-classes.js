@@ -11,10 +11,11 @@ class Person {
      * @memberof Person
      */
     constructor(personAttributes) {
-        this.name = personAttributes.name;
-        this.age = personAttributes.age;
-        this.location = personAttributes.location;
-        this.gender = personAttributes.gender;
+        const {name, age, location, gender} = personAttributes;
+        this.name = name;
+        this.age = age;
+        this.location = location;
+        this.gender = gender;
     }
 
    /**
