@@ -190,8 +190,8 @@ const noble = new Student({
     location: 'lagos, nigeria',
     gender: 'male',
     previousBackground: 'Boxer',
-    className: 'Webeu sprint2',
-    favSubjects: 'CSS',
+    className: 'Webeu2 sprint2',
+    favSubjects: ['CSS', 'HTML', 'JavaScript'],
 });
 
 const vincent = new Student({
@@ -200,6 +200,31 @@ const vincent = new Student({
     location: 'jos, nigeria',
     gender: 'male',
     previousBackground: 'Newspaper vendor',
-    className: 'Webeu sprint3',
-    favSubjects: 'Javascript',
+    className: 'Webeu2 sprint3',
+    favSubjects: ['JavaScript', 'Ruby', 'Python'],
+});
+
+// Project Manager Instances
+const ogbonna = new ProjectManager({
+    name: 'ogbonna',
+    age: 33,
+    location: 'lagos, nigeria',
+    gender: 'male',
+    specialty: 'Mobile Development',
+    favLanguage: 'Java',
+    catchPhrase: 'Never stop learning',
+    gradClassName: 'webeu1',
+    favInstructor: 'Gabe',
+});
+
+const ade = new ProjectManager({
+    name: 'ade',
+    age: 35,
+    location: 'lagos, nigeria',
+    gender: 'male',
+    specialty: 'Web Development',
+    favLanguage: 'Ruby on Rails',
+    catchPhrase: 'Always seek out growth',
+    gradClassName: 'webeu1',
+    favInstructor: 'Gabe',
 });
