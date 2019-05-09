@@ -24,18 +24,11 @@ class Person {
     * @memberof Person
     */
    speak() {
-        return `Hello my name is ${this.name}, I am from ${this.location}.`;
+        return console.log(`Hello my name is ${this.name}, I am from ${this.location}.`);
     }
 }
 
-const Johnson = new Person({
-    name: 'johnson',
-    age: 34,
-    location: 'lagos, nigeria',
-    gender: 'male',
-});
 
-console.log(Johnson.speak());
 /**
  *
  *
@@ -63,7 +56,7 @@ class Instructor extends Person {
      * @memberof Instructor
      */
     demo(subject) {
-        return `Today we are learning about ${subject}`;
+        return console.log(`Today we are learning about ${subject}`);
     }
 
     /**
@@ -75,23 +68,10 @@ class Instructor extends Person {
      * @memberof Instructor
      */
     grade(student, subject) {
-        return `${student.name} receives a perfect score on ${subject}`;
+        return console.log(`${student.name} receives a perfect score on ${subject}`);
     }
     
 }
-
-const nabeelah = new Instructor({
-    name: 'nabeelah',
-    age: 32,
-    location: 'lagos, nigeria',
-    gender: 'female',
-    specialty: 'Javascript',
-});
-
-console.log(nabeelah.grade({
-    name: 'Kelechi',
-    class: 'js2',
-},'Javascript'));
 
 
 /**
@@ -121,7 +101,7 @@ class Student extends Person {
      * @memberof Student
      */
     listSubjects() {
-        return this.favSubjects.map(subject => console.log (subject))
+        return console.log(this.favSubjects.map(subject => console.log (subject)));
     }
 
     /**
@@ -132,7 +112,7 @@ class Student extends Person {
      * @memberof Student
      */
     prAssignment(subject) {
-        return `${this.name} has submitted a PR for ${subject}`;
+        return console.log(`${this.name} has submitted a PR for ${subject}`);
     }
 
     /**
@@ -143,24 +123,9 @@ class Student extends Person {
      * @memberof Student
      */
     sprintChallenge(subject) {
-        return `${this.name} has begun sprint challenge on ${subject}`;
+        return console.log(`${this.name} has begun sprint challenge on ${subject}`);
     }
 }
-
-const melvin = new Student({
-    name: 'melvin',
-    previousBackground: 'tailor',
-    className: 'webeu2',
-    favSubjects: [
-        'html',
-        'css',
-        'react',
-        'javascript'
-    ],
-});
-
-console.log(melvin.listSubjects());
-
 
 
 class ProjectManager extends Instructor {
@@ -171,17 +136,30 @@ class ProjectManager extends Instructor {
     }
 
     standUp(channel) {
-        return `${this.name} announces to ${channel}, @channel standup time`;
+        return console.log(`${this.name} announces to ${channel}, @channel standup time`);
     }
 
     debugCode(student, subject) {
-        return `${this.name} debugs ${student.name}'s code on ${subject}`;
+        return console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
     }
 }
 
-const Kelechi = new ProjectManager({
-    name: 'kelechi',
-    gradClassName: 'JS2',
-    favInstructor: 'matt',
+
+// Person class instances
+
+const Johnson = new Person({
+    name: 'johnson',
+    age: 34,
+    location: 'lagos, nigeria',
+    gender: 'male',
 });
-console.log(Kelechi.debugCode({name:'noble',},'react'));
+
+const Melvine = new Person({
+    name: 'melvine',
+    age: 37,
+    location: 'cameroon',
+    gender: 'male',
+});
+
+
+
