@@ -182,3 +182,24 @@ const kelechi = new Instructor({
     favLanguage: 'Java',
     catchPhrase: 'I like trouble',
 });
+
+// Student class Instances
+const noble = new Student({
+    name: 'melvine',
+    age: 17,
+    location: 'lagos, nigeria',
+    gender: 'male',
+    previousBackground: 'Boxer',
+    className: 'Webeu sprint2',
+    favSubjects: 'CSS',
+});
+
+const vincent = new Student({
+    name: 'vincent',
+    age: 18,
+    location: 'jos, nigeria',
+    gender: 'male',
+    previousBackground: 'Newspaper vendor',
+    className: 'Webeu sprint3',
+    favSubjects: 'Javascript',
+});
